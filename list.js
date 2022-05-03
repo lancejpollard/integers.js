@@ -4,21 +4,26 @@ const numbers = require('.')
 const MAX = 10000
 const CHUNK = 5000
 
+listPow2()
 listStar()
-// listTriangular()
+listTriangular()
+
+async function listPow2() {
+  await write(`pow2`, 1, 256)
+}
 
 async function listStar() {
-  await write(`star`)
+  await write(`star`, 2, 1000000)
 }
 
 async function listTriangular() {
-  await write(`triangular`)
+  await write(`triangular`, 2, 1000000)
 }
 
-async function write(type) {
+async function write(type, min, max) {
   const stream = fs.createWriteStream(`list/${type}.csv`, { flags: 'w+' })
   stream.write(`number,\n`)
-  await chunk(stream, 2, MAX, (i, n) => list(type, i, n))
+  await chunk(stream, min, max, (i, n) => list(type, i, n))
 }
 
 async function chunk(stream, start, end, callback) {

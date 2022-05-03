@@ -2,6 +2,14 @@
 module.exports = {
   triangular,
   star,
+  pow2,
+}
+
+function pow2(start, end, callback) {
+  walk(start, end, i => {
+    const x = 2n ** BigInt(i)
+    callback(x)
+  })
 }
 
 function triangular(start, end, callback) {
