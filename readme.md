@@ -10,3 +10,5 @@ node list
 ```
 
 Currently it generates up to 10,000 of each for now, one at a time, and saves them into the `list` folder.
+
+http://oeis.org/wiki/Index_to_OEIS:_Section_Cor#core
