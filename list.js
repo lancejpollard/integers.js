@@ -4,23 +4,23 @@ const numbers = require('.')
 const MAX = 10000
 const CHUNK = 5000
 
-// listPow5()
-// listPow7()
-// listStar()
-// listTriangular()
-// listTetrahedral()
-// listSquarePyramidal()
-// listPow3()
-// listStellaOctangula()
-// listNatural()
-// listSuperPrime()
-// listSafePrime()
-// listSophieGermainPrime()
-// listCenteredHeptagonal()
-// listHeptagonal()
-// listDivisors()
+listPow5()
+listPow7()
+listStar()
+listTriangular()
+listTetrahedral()
+listSquarePyramidal()
+listPow3()
+listStellaOctangula()
+listNatural()
+listSuperPrime()
+listSafePrime()
+listSophieGermainPrime()
+listCenteredHeptagonal()
+listHeptagonal()
+listDivisors()
 
-// listNgonalPyramidals()
+listNgonalPyramidals()
 
 listCenteredPolygonals()
 
@@ -111,7 +111,7 @@ async function listTriangular() {
 }
 
 async function write(type, min, max) {
-  const stream = fs.createWriteStream(`integers.js/list/${type}.csv`, { flags: 'w+' })
+  const stream = fs.createWriteStream(`list/${type}.csv`, { flags: 'w+' })
   await chunk(stream, min, max, (i, n, s) => list(type, i, n, s))
 }
 

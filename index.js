@@ -99,7 +99,7 @@ function safePrime(start, end, callback, i = 1) {
 
 function divisors(start, end, callback) {
   let n = start
-  while (n < end) {
+  while (n <= end) {
     let i
     let set = new Set
     for (i = 1; i * i < n; i++) {
